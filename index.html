@@ -124,6 +124,10 @@
         </div>
     </div>
     <div id="map"></div>
+    <div id="floating-panel">
+        <input id="hide-markers" type="button" value="Hide Markers" />
+        <input id="show-markers" type="button" value="Show Markers" />
+    </div>
 </body>
 
 <script>
@@ -182,6 +186,25 @@
             infoWindow3.open(map, marker3);
         })
 
+        document.getElementById("hide-markers").addEventListener("click", hideMarkers);
+        document.getElementById("show-markers").addEventListener("click", showMarkers);
+
+        function setMapOnAll(map) {
+            marker1.setMap(map);
+        }
+
+        function hideMarkers() {
+            setMapOnAll(null);
+        }
+
+        function showKotla(map){
+            marker1.setMap(map);
+        }
+
+        function showMarkers() {
+            showKotla(map);
+        }
+
         var infoWindow = new google.maps.InfoWindow();
         const locationButton = document.createElement("button");
         locationButton.textContent = "Your Current Location";
@@ -229,6 +252,7 @@
         );
         infoWindow.open(map);
     }
+
 </script>
 
 <script
