@@ -93,11 +93,18 @@
             padding-left: 20px;
         }
         #map{
-            margin-top: 100px;
-            margin-left: 300px;
+            margin-top: 70px;
+            margin-left: 150px;
             border: 2px solid black;
             height: 550px;
             width: 800px;
+        }
+        .tool{
+            border: 2px solid red;
+            margin: 10px 0px 0px 0px;
+            position:fixed;
+            top: 200px;
+            right: 20px;
         }
     </style>
 </head>
@@ -124,9 +131,18 @@
         </div>
     </div>
     <div id="map"></div>
-    <div id="floating-panel">
-        <input id="hide-markers" type="button" value="Hide Markers" />
-        <input id="show-markers" type="button" value="Show Markers" />
+    <div class="tool">
+        <p class="detial">Switch On Or Off Your Charging Location</p>
+        <br id="floating-panel">
+            <input id="hide-markers" type="button" value="Hide Kotla Charging Station"/>
+            <input id="show-markers" type="button" value="Show Charging Station" /><br><br>
+            <input id="hide-markers1" type="button" value="Hide Baprola Charging Station"/>
+            <input id="show-markers1" type="button" value="Show Charging Station" /><br><br>
+            <input id="hide-markers2" type="button" value="Hide Bakkarwala Charging Station"/>
+            <input id="show-markers2" type="button" value="Show Charging Station" /><br><br>
+            <input id="hide-markers3" type="button" value="Hide Chanchal Park Charging Station"/>
+            <input id="show-markers3" type="button" value="Show Charging Station" />
+        </div>
     </div>
 </body>
 
@@ -186,23 +202,73 @@
             infoWindow3.open(map, marker3);
         })
 
+        //getting element
         document.getElementById("hide-markers").addEventListener("click", hideMarkers);
         document.getElementById("show-markers").addEventListener("click", showMarkers);
+        
+        document.getElementById("hide-markers1").addEventListener("click", hideMarkers1);
+        document.getElementById("show-markers1").addEventListener("click", showMarkers1);
+        
+        document.getElementById("hide-markers2").addEventListener("click", hideMarkers2);
+        document.getElementById("show-markers2").addEventListener("click", showMarkers2);
+        
+        document.getElementById("hide-markers3").addEventListener("click", hideMarkers3);
+        document.getElementById("show-markers3").addEventListener("click", showMarkers3);
 
+        //setting on map
         function setMapOnAll(map) {
             marker1.setMap(map);
         }
+        function setMapOnAll1(map) {
+            marker2.setMap(map);
+        }
+        function setMapOnAll2(map) {
+            marker3.setMap(map);
+        }
+        function setMapOnAll3(map) {
+            marker.setMap(map);
+        }
 
+        //on click hide do this
         function hideMarkers() {
             setMapOnAll(null);
         }
+        function hideMarkers1() {
+            setMapOnAll1(null);
+        }
+        function hideMarkers2() {
+            setMapOnAll2(null);
+        }
+        function hideMarkers3() {
+            setMapOnAll3(null);
+        }
 
+        //will call when click on show maker
         function showKotla(map){
             marker1.setMap(map);
         }
+        function showBap(map){
+            marker2.setMap(map);
+        }
+        function showBak(map){
+            marker3.setMap(map);
+        }
+        function showChan(map){
+            marker.setMap(map);
+        }
 
+        //to show marker of pres..
         function showMarkers() {
             showKotla(map);
+        }
+        function showMarkers1() {
+            showBap(map);
+        }
+        function showMarkers2() {
+            showBak(map);
+        }
+        function showMarkers3() {
+            showChan(map);
         }
 
         var infoWindow = new google.maps.InfoWindow();
