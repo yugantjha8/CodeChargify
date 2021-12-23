@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+    .header{
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        justify-content: space-between;
+        background-image: linear-gradient( #dddddd ,#fdfbfb );
+        align-items: center;
+    }
+    .login{
+        cursor: pointer;
+        border-radius: 23px;
+        font-size: 20px;
+        font-weight: 500;
+        margin-right: 20px;
+        padding: 7px 20px;
+        color: white;
+        background-color: rgb(148 193 31);
+    }
+
+    .name{
+        margin-left: 15px;
+        font-size: 25px;
+    }
+    .icon img{    width: 205px;
+        height: 60px;
+        cursor: pointer;
+        margin-left: 15px;
+        filter: drop-shadow(0 0 0.75rem rgb(148 193 31));
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient( #fcfcfc ,#fdfbfb );
+        color: #686868;
+    }
+    .are{
+        font-size: 24px;
+        font-weight: 700;
+        
+    }
+    .option1{
+        border-radius: 10px 10px 10px 10px;
+        background-color: rgb(148 193 31);
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 6px;
+        color: white;
+        padding-bottom: 6px;
+    }
+    .option2{
+        padding-top: 6px;
+        padding-bottom: 6px;
+        color: rgb(0, 0, 0);
+        padding-right: 20px;
+        padding-left: 20px;
+        filter: drop-shadow(0 0 0.75rem rgb(148 193 31));
+    }
+    .option{
+        display: flex; 
+        background-color: rgb(241, 241, 241);
+        border-radius: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .option :hover{
+        filter: drop-shadow(0 0 0.75rem rgb(148 193 31));
+    }
+    .loc{
+        /* float: left; */
+        display: flex;
+        align-items: center;
+    }
+    .loc :hover{
+        filter: drop-shadow(0 0 0.75rem rgb(194, 194, 194));
+    }
+    .location{
+        font-size: 24px;
+
+        font-weight: 700;
+
+    }
+    .button{
+        display: flex;
+        background-color: rgb(241, 241, 241)    ;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    .on{
+        background-color: rgb(148 193 31);
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .off{
+        cursor: pointer;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    #map{
+        
+        /* margin-left: 300px; */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 500px;
+        width: 60%;
+    }
+
+    .left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mapContainer{
+        display: flex;
+        justify-content: space-around;
+        /* align-items: center; */
+        background-image: linear-gradient(#fdfbfb , #9c9c9c);
+        /* box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px; */
+        padding-top: 60px;
+    }
+    .container{
+        padding-top: 50px;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .tool{
+        width: 30%;
+    }
+    .tool p{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    
+    input{
+        width: 300px;
+        cursor: pointer;
+        margin: 10px 0;
+        border: 1px solid #686868;
+        padding: 7px 0;
+    }
+.tool input:hover{
+    border: none;
+    border: 1px solid rgb(148 193 31);
+    background-color: rgb(148 193 31);
+    color: white;
+}
+    @media screen and (max-width: 730px) {
+        .container {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .loc{
+            margin-top: 30px;
+        }
+      }
